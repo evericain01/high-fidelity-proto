@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Friends List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lato:wght@700&display=swap" rel="stylesheet"> <!-- Added fonts -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- User Profile Section -->
+        <div class="user-profile">
+            <img src="user_avatar.png" alt="User Avatar">
+            <div class="user-info">
+                <h2>Gamer_123</h2>
+                <p id="user-status">Status: <span id="status-name" class="status-online">Online</span></p>
+                <div class="status-settings">
+                    <select id="status-select">
+                        <option value="Online">Online</option>
+                        <option value="Away">Away</option>
+                        <option value="Invisible">Invisible</option>
+                        <option value="Custom">Custom...</option>
+                    </select>
+                    <input type="text" id="custom-status" placeholder="Enter custom status" style="display:none;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Group Filter Section -->
+        <div class="filter-section">
+            <label for="group-filter">Search Group:</label>
+            <select id="group-filter">
+                <option value="All">Friend's List</option>
+            </select>
+            <button id="open-add-friend-modal-btn" title="Add Friend">
+                <img src="add_friend_icon.png" alt="Add Friend" />
+            </button>
+        </div>
+
+        <!-- Friends Groups Section -->
+        <div class="groups">
+        </div>
+
+        <!-- Add Group Modal -->
+        <div id="add-group-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Create New Group</h2>
+                <label for="group-name">Group Name:</label>
+                <input type="text" id="group-name" placeholder="Enter group name">
+                <div class="modal-actions">
+                    <button id="create-group-btn">Create</button>
+                    <button id="cancel-group-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Friend Modal -->
+        <div id="add-friend-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Add New Friend</h2>
+                <label for="friend-name-input">Friend Name:</label>
+                <input type="text" id="friend-name-input" placeholder="Enter friend's name">
+                <div class="modal-actions">
+                    <button id="add-friend-btn">Add Friend</button>
+                    <button id="cancel-friend-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add to Group Modal -->
+        <div id="add-to-group-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Add to Group</h2>
+                <p id="friend-name-display"></p>
+                <label for="select-group">Select a Group:</label>
+                <select id="select-group">
+                </select>
+                <div class="modal-actions">
+                    <button id="add-to-group-btn">Add to Group</button>
+                    <button id="cancel-add-to-group-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <button id="add-group-btn">Create Group</button>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
