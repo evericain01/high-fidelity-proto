@@ -24,7 +24,7 @@ const friendsData = [
 
     // Raid Team
     { name: 'Charlie', status: 'Away', raidProgress: 'Completed 3 Raids', group: 'Casual Gamers' },
-    { name: 'RogueHealer', status: 'In Game', currentGame: 'World of Warcraft', timeInGame: '2 hours', group: 'Raid Team' },
+    { name: 'RogueHealer', status: 'In Game', currentGame: 'Resident Evil 4', timeInGame: '2 hours', group: 'Raid Team' },
     { name: 'Titan', status: 'Away', raidProgress: 'Completed 5 Raids', group: 'Raid Team' },
     { name: 'BattleMage', status: 'Offline', lastOnline: 'Last online 4 hours ago', group: 'Raid Team' },
 
@@ -167,7 +167,7 @@ cancelAddToGroupBtn.addEventListener('click', () => {
 function generateRandomFriendFields(name) {
     const statuses = ['Online', 'Away', 'Offline', 'In Game'];
     const groups = ['Online Friends', 'Offline Friends', 'Casual Gamers', 'Raid Team'];
-    const games = ['Elden Ring', 'Tekken 8', 'Diablo IV', 'DOTA 2', 'Overcooked 2', 'World of Warcraft'];
+    const games = ['Elden Ring', 'Tekken 8', 'Diablo IV', 'DOTA 2', 'Overcooked 2', 'Resident Evil 4'];
 
     const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
     const randomGroup = groups[Math.floor(Math.random() * groups.length)];
